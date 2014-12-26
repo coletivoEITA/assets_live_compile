@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Braulio Bhavamitra"]
   s.email       = ["brauliobo@gmail.com"]
   s.homepage    = %q{http://github.com/coletivoEITA/assets_live_compile}
-  s.summary     = %q{Compile and save assets on demand instead of using rake assets:compile}
+  s.summary     = %q{Compile and save assets on demand instead of using rake assets:precompile}
   #s.description = %q{}
   
   s.files         = `git ls-files`.split("\n")
