@@ -1,6 +1,6 @@
 assets_live_compile
 =========================
-Compile and save assets on demand instead of using `rake assets:compile`
+Compile and save assets on demand instead of using `rake assets:precompile`
 
 This works just like `rake assets:precompile` but is triggered on the asset HTTP request, so the cost of compilation is due to the first asset request. Next time Nginx will find the static asset on `public/assets`.
 
