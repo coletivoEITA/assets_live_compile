@@ -10,14 +10,22 @@ Compile your assets by doing a warm up request :)
 
 Configuration
 -------------
+Add it to your Gemfile:
+```ruby
+group :assets do
+  gem 'assets_live_compile'
+  ...
+end
+```
 
 On `config/application.rb`, load the `:assets` group of the `Gemfile`:
-
-    Bundler.require :default, :assets, Rails.env
+```ruby
+Bundler.require :default, :assets, Rails.env
+```
 
 Then configure `config/environments/production.rb`:
-
-    config.assets.serve_static_assets = true
-    config.assets.compile = true
-    config.assets.cache_store = :assets_live_compile_store
-
+```ruby
+config.assets.serve_static_assets = true
+config.assets.compile = true
+config.assets.cache_store = :assets_live_compile_store
+```
