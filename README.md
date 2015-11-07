@@ -23,9 +23,18 @@ On `config/application.rb`, load the `:assets` group of the `Gemfile`:
 Bundler.require :default, :assets, Rails.env
 ```
 
-Then configure `config/environments/production.rb`:
+Then configure `config/environments/production.rb`,
+
+On Rails 4:
 ```ruby
 config.assets.serve_static_assets = true
-config.assets.compile = true
+config.assets.configure do |env|
+  env.cache = Sprockets::Cache::AssetsLiveCompileStore.new
+end
+```
+
+On Rails 3:
+```ruby
+config.assets.serve_static_assets = true
 config.assets.cache_store = :assets_live_compile_store
 ```
