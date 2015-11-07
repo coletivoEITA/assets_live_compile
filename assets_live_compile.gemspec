@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 Gem::Specification.new do |s|
   s.name        = "assets_live_compile"
   s.license     = "LGPL-3.0"
-  s.version     = '0.2.0'
+  s.version     = '0.2.1'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Braulio Bhavamitra"]
   s.email       = ["brauliobo@gmail.com"]
